@@ -1,26 +1,29 @@
 {
-  "name": "groots-validate",
-  "version": "1.0.0",
-  "description": "validation and sanitization data from http requests",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/almas-alright/groots-validator.git"
-  },
-  "keywords": [
-    "validator",
-    "groots"
-  ],
-  "author": "groots",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/almas-alright/groots-validator/issues"
-  },
-  "homepage": "https://github.com/almas-alright/groots-validator#readme",
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+    "name": "groots-validate",
+    "version": "1.0.0",
+    "description": "validation and sanitization data from http requests",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/almas-alright/groots-validator.git"
+    },
+    "keywords": [
+        "validator",
+        "groots"
+    ],
+    "author": "groots",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/almas-alright/groots-validator/issues"
+    },
+    "homepage": "https://github.com/almas-alright/groots-validator#readme",
+    "dependencies": {
+        "express": "^4.18.2"
+    },
+    "devDependencies": {
+        "typescript": "^4.9.3"
+    }
 }

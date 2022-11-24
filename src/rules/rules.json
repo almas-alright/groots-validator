@@ -1,0 +1,8 @@
+{
+    "name": "int|min:5|max:100",
+    "email": "required|string|email",
+    "username": "required|string",
+    "phone": "required|string",
+    "password": "required|string|min:6|confirmed",
+    "gender": "string"
+}
