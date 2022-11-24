@@ -4,13 +4,20 @@ import Rules from "./rules/rules.json";
 
 export class Validator implements IValidator {
     rules: any;
-    constructor(rules: any) {
-        rules = Rules;
-        console.log(rules);
+    constructor() {
+        this.rules = Rules;
     }
-    addRules(customizeRules: JSON, rules: JSON): void {
-        throw new Error("Method not implemented.");
+
+    /**
+     *
+     * @param customizeRules add more customize rules.
+     * @return void;
+     */
+    addRules(customizeRules: JSON): void {
+        const allRule = { ...customizeRules, ...Rules };
+        this.rules = allRule;
     }
+
     getErrors(rules: JSON, errors: IErrorType): Promise<object> {
         throw new Error("Method not implemented.");
     }
