@@ -20,7 +20,7 @@ classDiagram
 
     IValidator <|.. Validator : implements
     Validator o--|> IRules : composition
-    IErrorType <|.. Validator : composition
+    IErrorType <|.. Validator : type
     class Validator{
         +rules:<rules IRules>;
         +constructor(rules:[], errors:IErrorType);
@@ -36,7 +36,7 @@ classDiagram
         +value:string;
     }
 
-    IErrorType <|.. IRules : composition
+    IErrorType <|.. IRules : type
     class IRules{
         <<interface>>
         +ruleExists():Promise~bool~;
@@ -70,4 +70,6 @@ classDiagram
         +ruleExists():Promise~bool~;
         +verify(rule:any, errors:IErrors) Promise~array~;
     }
+
+
 ```
