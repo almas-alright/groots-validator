@@ -14,7 +14,7 @@ classDiagram
 
     class IValidator{
         <<interface>>
-        +ddRules(rule:json, rules:<rules IRules>) void;
+        +addRules(rule:json, rules:<rules IRules>) void;
         +getErrors(rules:[], errors:IErrorType): Promise~obj~;
     }
 
