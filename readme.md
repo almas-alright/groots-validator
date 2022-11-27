@@ -2,11 +2,13 @@
 
 ```ts
 const validator = new Validator();
+// Use this App level
 app.use(validator);
-// Add new rules in routes
-const addRules = validator.addRules(newRules: json);
-app.post('/newEndpoint', addRules(rules), constroller );
-const errors = validator.getErrors;
+
+// Add new rules and mapping it with route levels.
+const addnewEndpointRules = validator.addRules(newRules: json); // return validator.getErrors
+`POST_RULES:addnewEndpointRules`
+app.post('/newEndpoint', constroller );
 ```
 
 ```mermaid
@@ -22,8 +24,9 @@ classDiagram
     Validator o--|> IRules : composition
     IErrorType <|.. Validator : type
     class Validator{
-        +rules:<rules IRules>;
-        +constructor(rules:[], errors:IErrorType);
+        %% rules means existing rules
+        +rules:<Rules IRules>;
+        +constructor(rules:rules, errors:IErrorType);
         +addRules(rule:json, rules:<rules IRules>): void;
         +getErrors(rules:[], errors:IErrorType): Promise~obj~;
     }
