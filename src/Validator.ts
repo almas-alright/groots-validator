@@ -19,6 +19,9 @@ export class Validator implements IValidator {
     }
 
     getErrors(rules: JSON, errors: IErrorType): Promise<object> {
+        rules = this.rules;
+        console.log(rules);
+
         throw new Error("Method not implemented.");
     }
 }
