@@ -14,7 +14,7 @@ classDiagram
 
     class IValidator{
         <<interface>>
-        +addRules(rule:json, rules:<rules IRules>) void;
+        +addRules(rule:json, rules:<rules IRules>): void;
         +getErrors(rules:[], errors:IErrorType): Promise~obj~;
     }
 
@@ -23,9 +23,8 @@ classDiagram
     IErrorType <|.. Validator : composition
     class Validator{
         +rules:<rules IRules>;
-        +constructor(this.selectMethods, rules:[], errors:IErrorType);
-        +addRules(rule:json, rules:<rules IRules>) void;
-         %% ruleExistsRules call validator
+        +constructor(rules:[], errors:IErrorType);
+        +addRules(rule:json, rules:<rules IRules>): void;
         +getErrors(rules:[], errors:IErrorType): Promise~obj~;
     }
 
@@ -71,6 +70,4 @@ classDiagram
         +ruleExists():Promise~bool~;
         +verify(rule:any, errors:IErrors) Promise~array~;
     }
-
-
 ```
